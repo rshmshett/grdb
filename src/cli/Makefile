@@ -12,6 +12,7 @@ OBJS =	bufdump.o 			\
 	cli_graph_schema_add.o		\
 	cli_graph_tuple.o		\
 	cli_graph_update_tuples.o	\
+	cli_graph_shortest_path.o       \
 	lex.o				\
 	main.o
 

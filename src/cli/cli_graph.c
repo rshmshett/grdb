@@ -10,6 +10,7 @@ void cli_graph_new(char *cmdline, int *pos);
 void cli_graph_edge(char *cmdline, int *pos);
 void cli_graph_schema(char *cmdline, int *pos);
 void cli_graph_tuple(char *cmdline, int *pos);
+void cli_graph_shortest_path(char *cmdline, int *pos);
 
 static void
 cli_graph_print()
@@ -48,6 +49,11 @@ cli_graph(char *cmdline, int *pos)
 
 	else if (strcmp(s, "tuple") == 0 || strcmp(s, "t") == 0)
 		cli_graph_tuple(cmdline, pos);
+
+        else if (strcmp(s, "shortest_path") == 0 || strcmp(s, "sp") == 0) {
+                cli_graph_shortest_path(cmdline, pos);
+                //cli_graph_print();
+        }
 
 	else if (isdigit(s[0])) {
 		graph_t g;
